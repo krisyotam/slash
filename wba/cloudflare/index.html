@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>What's Bad About Cloudflare</title>
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<h1>What's Bad About Cloudflare</h1>
+
+Many web sites use Cloudflare to filter access.  The goal of
+preventing DDS attacks is not in itself bad, but Cloudflare does bad
+things to each legitimate visitor:
+
+<ul>
+<li> It determine's the visitor's location based on per IP address.
+(Using a proxy can thwart this.)  Tracking people is unjust.
+
+<li> It acts as a man-in-the-middle in encrypted (HTTPS) communication
+between the visitor and the site:  Cloudflare knows what page the
+visitor is looking at and sees any other communication as well.
+
+</ul>
+
+At times in the past I've noticed that Cloudflare blocked connecting
+via Tor.  My recollection &mdash; which is somewhat hazy by now &mdash; was that
+Cloudflare decided that the Tor exit node cast doubt on whether I was
+a human being, and it asked me to answer a CAPTCHA.
+<p>
+(Why should it matter whether I am a human being, I wonder, when all I
+try to do is look at a page once?)
+<p>
+I have no objection to answering a CAPTCHA, in principle; however,
+Cloudflare disregarded my answer, because the CAPTCHA depended on
+nonfree JavaScript code that Cloudflare sent to my browser.  Of
+course, <a href="https://gnu.org/philosophy/javascript-trap.html">I refuse to run that</a>.
+
+<hr>
+Copyright (C) 2022 Richard Stallman<br>
+Verbatim copying and distribution of this entire page are
+permitted in any medium, provided this notice is preserved.
+
+<hr>
+<p>Research sourced from <a href="https://stallman.org/cloudflare.html">stallman.org</a>.</p>
+<p><a href="/">View all</a></p>
+</body>
+</html>
