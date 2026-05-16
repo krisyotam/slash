@@ -7,6 +7,6 @@ tasks:
         set -eu
         cd ~/slashpages
         git fetch --quiet origin
-        git reset --hard origin/main
+        git reset --hard origin/master
         echo "slash pages deployed"
       '
